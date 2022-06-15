@@ -11,10 +11,19 @@ form?.addEventListener("submit", (e) => {
 
     if (input?.value == "" || input?.value == null) return;
 
-    const task = {
+    const newTask = {
         id: uuidV4(),
         title: input.value,
         completed: false,
         createdAt: new Date(),
     };
+
+    addListItem(newTask);
 });
+
+function addListItem(task: {
+    id: String;
+    title: string;
+    completed: boolean;
+    createdAt: Date;
+}) {}
